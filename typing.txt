@@ -1,0 +1,45 @@
+make user_characters = e.target.value
+clear input on space
+change color of correct and wrong letters
+
+make input clear on space but keep value //solved 
+
+make function start with no delay
+
+add event listener to space {
+    user_characters.push(e.target.value);
+}
+add event listener to backspace {
+    user_characters.pop()
+
+} // solved 
+
+
+In order to make text button work:
+    - choose random quote from array with math.random method
+    - split with spaces
+    - 
+
+
+
+For results page later add :
+    - seconds of test
+    - raw speed
+    - rank of user
+    - recommendation to article from main page based on speed
+    - generate random tip based on speed
+
+Pages of Typing Guide:
+    - 4 articles for each speed (done, just fix design)
+    - typing field (done)
+    - improvement page (store all wpm and accuracy of user on graphs)
+
+Features:
+    - Theme switch
+    - accuracy and wpm should be stored to localstorage
+    - there should be 2 improvement graphs, one for words and other for texts
+    - once user finishes typing, an article should get recommended based on speed
+
+
+On main page: 
+    -  
