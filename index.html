@@ -6,30 +6,50 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
+        <nav class="navbar navbar-light bg-light">
+            <a class="navbar-brand" href="">
+            <img src="Images/logo.png" width="80"  class="d-inline-block logo-img" alt="logo">
+            Typing Guide
+            </a>
+                <div class="" id="nav-holder">
+                    <ul class="navbar-nav nav" style="display:flex; flex-direction:row">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="index.html">Home<span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="typing.html">Typing Test</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="progress.html">Improvement</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Theme</a>
+                        </li>
+                    </ul>
+                </div>
+                <div onclick='menu()'class="nav-menu" style="margin-right:20px;"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+                  </svg></div>
+                
+        </nav>
+        <div class="top-menu">
+            <ul class="menu-ul">
+                <li class="">
+                    <a class="nav-link menu-link" href="index.html">Home<span class="sr-only">(current)</span></a>
+                </li><hr class="menu-hr">
+                <li class="">
+                    <a class="nav-link menu-link" href="typing.html">Typing Test</a>
+                </li><hr class="menu-hr">
+                <li class="">
+                    <a class="nav-link menu-link" href="progress.html">Improvement</a>
+                </li><hr class="menu-hr">
+                <li class="">
+                    <a class="nav-link menu-link" href="#">Theme</a>
+                </li>
+            </ul>
+        </div>
         <main id="index-main">
-            <nav class="navbar navbar-light bg-light">
-                <a class="navbar-brand" href="">
-                <img src="Images/logo.png" width="80"  class="d-inline-block align-top logo-img" alt="logo">
-                Typing Guide
-                </a>
-                    <div class="collapse" id="nav-holder">
-                        <ul class="navbar-nav nav" style="display:flex; flex-direction:row">
-                            <li class="nav-item active">
-                                <a class="nav-link" href="index.html">Home<span class="sr-only">(current)</span></a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="typing.html">Typing Test</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Improvement</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Theme</a>
-                            </li>
-                        </ul>
-                    </div>
-                    
-            </nav>
+            
             <div class="container-fluid thing" id="first-page">
                 <a href="#second-page" class="learn-more">Learn more <div class="circle"><svg id='caret' xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="black" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
                     <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
@@ -79,21 +99,61 @@
                                 
                             </div>
                         </div>
-
-                            
-                        
                     </div>
                 </div>
-                   
-                
             </div>
-            <div class="container-fluid thing" id="second-page"></div>
+            <div class="container-fluid thing" id="second-page">
+                <h1 class="second-page-heading">Typing Guide Features:</h1>
+                    <div class="row feature-row">
+                        <div class="col-lg-4 col-md-12">
+                            <div class="first">
+                                <div class="feature-box">
+                                    <div class="img-wrapper">
+                                        <div class="feature-image image1"></div>
+                                    </div>
+                                    
+                                    <div class="text-area">
+                                        <h1>Typing Test:</h1><hr class="feature-hr">
+                                        <p>Typing guide has its own typing test where you can discover your rank and speed through either typing random words or quoted texts. Results of each test include raw speed, wpm, accuracy, and time.</p>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-12">
+                            <div class="second">
+                                <div class="feature-box">
+                                    <div class="img-wrapper">
+                                        <div class="feature-image image2">
+                                        </div>
+                                    </div>
+                                    <div class="text-area">
+                                        <h1>Progress Tracker:</h1><hr class="feature-hr">
+                                        <p>Typing guide stores a bunch of information of your tests like speed, accuracy, and date into the local storage so that you can keep track of your progress and see how well you’re improving. The information is displayed through a line graph.</p>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-12">
+                            <div class="third">
+                                <div class="feature-box">
+                                    <div class="img-wrapper">
+                                        <div class="feature-image image3"></div>
+                                    </div>
+                                   
+                                    <div class="text-area">
+                                        <h1>Guiding articles:</h1><hr class="feature-hr">
+                                        <p>Improving the typing speed varies a lot within each level. That’s why Typing Guide has 4 guiding articles in which you can discover tips, advice, and general things you should be doing based on your experience.</p>
+                                    </div>
+                                </div>
+                               
+                            </div>
+                        </div>
+                    </div>
+            </div>
           </main>
-
-
-
-
-
+          <script src="typing.js"></script>
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>

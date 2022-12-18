@@ -1,14 +1,14 @@
 const input_element = document.getElementById('user-input');
 const display_element = document.getElementById('display_element');
-const quotes = ["For the first time, he heard something that he knew to be music. He heard people singing. Behind him, across vast distances of space and time, from the place he had left, he thought he heard music too. But perhaps, it was only an echo.", 
-                "Is this the real life? Is this just fantasy? Caught in a landslide, no escape from reality. Open your eyes, look up to the skies and see. I'm just a poor boy, I need no sympathy. Because I'm easy come, easy go, little high, little low. Any way the wind blows doesn't really matter to me.", 
-                "Why are you the way that you are? Honestly, every time I try to do something fun or exciting, you make it not... that way. I hate so much about the things that you choose to be.", 
-                "My love is alive way down in my heart. Although we are miles apart, if you ever need a helping hand I'll be there on the double as fast as I can.", 
-                "All the blue light reflections that color my mind when I sleep. And the lovesick rejections that accompany the company I keep. All the razor perceptions that cut just a little too deep. Hey I can bleed as well as anyone, but I need someone to help me sleep.", 
-                "What's cool about really little kids is that they don't say stuff to try to hurt your feelings, even though sometimes they do say stuff that hurts your feelings. But they don't actually know what they're saying. Big kids, though: they know what they're saying. And that is definitely not fun for me.", 
-                "Remember that humor is written backwards. That means you first find the cliche you want to work on, then build a story around it.", 
-                "And even though the moment passed me by, I still can't turn away. 'Cause all the dreams you never thought you'd lose got tossed along the way. And letters that you never meant to send got lost or thrown away. And now we're grown up orphans that never knew their names. We don't belong to no one; that's a shame. If you could hide inside me, maybe for a while, and I won't tell no one your name.", 
-                "You see, what we're talkin' about here is an organism that imitates other life-forms, and it imitates 'em perfectly. When this thing attacked our dogs it tried to digest them... absorb them, and in the process shape its own cells to imitate them. This for instance. That's not dog. It's imitation. We got to it before it had time to finish.", 
+const quotes = ["For the first time, he heard something that he knew to be music. He heard people singing. Behind him, across vast distances of space and time, from the place he had left, he thought he heard music too. But perhaps, it was only an echo.",
+                "Is this the real life? Is this just fantasy? Caught in a landslide, no escape from reality. Open your eyes, look up to the skies and see. I'm just a poor boy, I need no sympathy. Because I'm easy come, easy go, little high, little low. Any way the wind blows doesn't really matter to me.",
+                "Why are you the way that you are? Honestly, every time I try to do something fun or exciting, you make it not... that way. I hate so much about the things that you choose to be.",
+                "My love is alive way down in my heart. Although we are miles apart, if you ever need a helping hand I'll be there on the double as fast as I can.",
+                "All the blue light reflections that color my mind when I sleep. And the lovesick rejections that accompany the company I keep. All the razor perceptions that cut just a little too deep. Hey I can bleed as well as anyone, but I need someone to help me sleep.",
+                "What's cool about really little kids is that they don't say stuff to try to hurt your feelings, even though sometimes they do say stuff that hurts your feelings. But they don't actually know what they're saying. Big kids, though: they know what they're saying. And that is definitely not fun for me.",
+                "Remember that humor is written backwards. That means you first find the cliche you want to work on, then build a story around it.",
+                "And even though the moment passed me by, I still can't turn away. 'Cause all the dreams you never thought you'd lose got tossed along the way. And letters that you never meant to send got lost or thrown away. And now we're grown up orphans that never knew their names. We don't belong to no one; that's a shame. If you could hide inside me, maybe for a while, and I won't tell no one your name.",
+                "You see, what we're talkin' about here is an organism that imitates other life-forms, and it imitates 'em perfectly. When this thing attacked our dogs it tried to digest them... absorb them, and in the process shape its own cells to imitate them. This for instance. That's not dog. It's imitation. We got to it before it had time to finish.",
                 "You can tell me that your dog ran away then tell me that it took three days. I've heard every joke, I've heard every one you'd say. You think there's not a lot goin' on. Look closer baby, you're so wrong. And that's why you can stay so long when there's not a lot goin' on.", "Buddy sat down beside me. He put his arm around my waist and brushed the hair from my ear. I didn't move. Then I heard him whisper, 'How would you like to be Mrs Buddy Willard?' I had an awful impulse to laugh.",
                 "To make power, people try to put pieces of this metal close enough together that they make heat fast, but not so close that they go out of control and blow up. This is very hard, but there is so much heat and power stored in this metal that some people have wanted to try anyway.",
                 "The arts are not a way to make a living. They are a very human way of making life more bearable. Practicing an art, no matter how well or badly, is a way to make your soul grow, for heaven's sake. Sing in the shower. Dance to the radio. Tell stories. Write a poem to a friend, even a lousy poem. Do it as well as you possibly can. You will get an enormous reward. You will have created something.",
@@ -46,9 +46,26 @@ const quotes = ["For the first time, he heard something that he knew to be music
                 "Everyone said I was daft to build a castle on a swamp, but I built it all the same, just to show them. It sank into the swamp. So I built a second one. That sank into the swamp. So I built a third. That burned down, fell over, then sank into the swamp. But the fourth one stayed up. And that's what you're going to get, Lad, the strongest castle in all of England.",
                 "Mother says I was a dancer before I could walk. She says I began to sing long before I could talk. But I've often wondered, how did it all start? Who found out that nothing can capture a heart like a melody can? Well, whoever it was, I'm a fan. So I say thank you for the music, the songs I'm singing. Thanks for all the joy they're bringing. Who can live without it? I ask in all honesty. What would life be? Without a song or a dance what are we? So I say thank you for the music, for giving it to me.",
                 "Dropping through sky, through the glass of the roof, through the roof of your mouth, through the mouth of your eye, through the eye of the needle, it's easier for me to get closer to heaven than ever feel whole again.",
-                "He may look like an idiot and talk like an idiot, but don't let that fool you. He really is an idiot."];
+                "He may look like an idiot and talk like an idiot, but don't let that fool you. He really is an idiot.",
+                "Try to understand men, if you understand each other you will be kind to each other. Knowing a man well never leads to hate and nearly always leads to love.",
+                "Life is nothing how he expected it would be when he was young and living under the delusion that things could be controlled. Nothing can be controlled. Only endured.",
+                "The people with ideas have no power and the people with power have no ideas.",
+                "Sometimes the briefest moments capture us, force us to take them in, and demand that we live the rest of our lives in reference to them.",
+                "I had considered how the things that never happen are often as much realities to us, in their effects, as those that are accomplished.",
+                "Take time to really think about your excuses and write them down. These are the same excuses that you always use to stop yourself from learning something new.",
+                "I never know if I can handle anything. That's what makes my life so exciting.",
+                "Spring is the time of year when it is summer in the sun and winter in the shade.",
+                "Where do you think you're going? Because I don't think you're going where you think you're going.",
+                "Mind is not in any one place. Every cell in this body has its own intelligence. The brain is sitting in your head, but mind is all over the place.",
+                "There's something moving through the windows and walls, I've seen it before, seen it before. You left me living with a lingering soul, how little you know, how little you know.",
+                "A straight line is said to have been cut in extreme and mean ratio when, as the whole line is to the greater segment, so is the greater to the lesser.",
+                "Nothing is more wonderful than the art of being free, but nothing is harder to learn how to use than freedom."];
 const words = "the of to and a in is it you that he was for on are with as I his they be at one have this from or had by hot but some what there we can out other were all your when up use word how said an each she which do their time if will way about many then them would write like so these her long make thing see him two has look more day could go come did my sound no most number who over know water than call first people may down side been now find any new work part take get place made live where after back little only round man year came show every good me give our under name very through just form much great think say help low line before turn cause same mean differ move right boy old too does tell sentence set three want air well also play small end put home read hand port large spell add even land here must big high such follow act why ask men change went light kind off need house picture try us again animal point mother world near build self earth father head stand own page should country found answer school grow study still learn plant cover food sun four thought let keep eye never last door between city tree cross since hard start might story saw far sea draw left late run don't while press close night real life few stop open seem together next white children begin got walk example ease paper often always music those both mark book letter until mile river car feet care second group carry took rain eat room friend began idea fish mountain north once base hear horse cut sure watch color face wood main enough plain girl usual young ready above ever red list though feel talk bird soon body dog family direct pose leave song measure state product black short numeral class wind question happen complete ship area half rock order fire south problem piece told knew pass farm top whole king size heard best hour better true during hundred am remember step early hold west ground interest reach fast five sing listen six table travel less morning ten simple several vowel toward war lay against pattern slow center love person money serve appear road map science rule govern pull cold notice voice fall power town fine certain fly unit lead cry dark machine note wait plan figure star box noun field rest correct able pound done beauty drive stood contain front teach week final gave green oh quick develop sleep warm free minute strong special mind behind clear tail produce fact street inch lot nothing course stay wheel full force blue object decide surface deep moon island foot yet busy test record boat common gold possible plane age dry wonder laugh thousand ago ran check game shape yes hot miss brought heat snow bed bring sit perhaps fill east weight language among";
 let all_words = words.split(" ");
+var iteration = 0;
+var chart1;
+var menu_case = 'closed'
+var chart2;
 let type = 'words';
 var characters_length;
 var challenge_text;
@@ -67,9 +84,37 @@ let user_characters = '';
 let input_count = 0;
 var Interval;
 var data;
-
+var overall_average_wpm = 0;
+var text_average_wpm = 0;
+var words_average_wpm = 0;
+var highest_overall_wpm = 0;
+var highest_text_wpm = 0;
+var highest_word_wpm = 0;
+var average_overall_accuracy = 0;
+var average_text_accuracy = 0;
+var average_words_accuracy = 0; //avg wpm, highest wpm, avg accuracy, rank
+var average_ten_overall = 0;
+var average_ten_words = 0;
+var average_ten_text = 0;
+var average_ten_accuracy = 0;
+var average_ten_words_accuracy = 0;
+var average_ten_text_accuracy = 0;
+var progress_type = 'overall';
+var progress_collection = [];
+var progress_data = [];
+var text_test_count = 0;
+var word_test_count = 0;;
+var overall_rank;
+var text_rank;
+var words_rank;
+const record = localStorage.getItem('record'); //should be an array of objects
 window.onload = function() {
-  repeat()
+  progress_data = JSON.parse(localStorage.getItem('record')) || [];
+  try {drawChart2()} catch {};
+  try {collectInfo()} catch {};
+  try {information_replacement()} catch{};
+  try {repeat()} catch {};
+  try {information_replacement()} catch{};
 }
 function repeat() {
   clearInterval(Interval)
@@ -113,28 +158,7 @@ function repeat2() {
   document.querySelector('.results-field').style.zIndex="0";
   repeat()
 }
-input_element.addEventListener('input', () => {
-    typing() 
-    if (started === false) {
-        started = true;
-        Interval = setInterval(function() {
-          
-            seconds ++;
-            wpm = Math.floor((true_characters / 5) / (seconds / 60))
-            raw = Math.floor((input_count / 5) / (seconds / 60))
-            console.log('true_characters:',true_characters)
-            console.log('input_count:',input_count)
-            accuracy = Math.floor(((user_characters.length - false_characters) / user_characters.length) * 100);
-            var moment_stats = [seconds,wpm,raw];
-            srw.push(moment_stats)
-            display_variables();
-            if (added == false) {
-              added = false;
-            }
-            
-        }, 1000);
-    }
-})
+
 function typing() {
   input_count ++
   user_characters = input_element.value;
@@ -169,6 +193,14 @@ function display_variables() {
   document.querySelector('.accuracy').innerHTML=accuracy + '%';
 }
 function display_results() {
+  // save wpm, accuracy, date, and type on localstorage of each test
+  progress_data.push({
+    type:type,
+    wpm:wpm,
+    accuracy:accuracy,
+    date: new Date().toISOString()})
+  console.log(progress_data);
+  localStorage.setItem('record', JSON.stringify(progress_data));
   document.querySelector('.field').style.opacity="0";
   document.querySelector('.results-field').style.opacity='1';
   document.querySelector('.field').style.zIndex="0";
@@ -199,6 +231,7 @@ function word() {
 
 google.charts.load('current', {'packages':['corechart']});
 google.charts.setOnLoadCallback(drawChart);
+
 function drawChart() {
   data = new google.visualization.DataTable();
   data.addColumn('number','time');
@@ -206,6 +239,7 @@ function drawChart() {
   data.addColumn('number','raw');
   data.addRows(srw);
   var options = {
+    pointSize: 3,
     curveType: 'function',
     backgroundColor: ('rgba(0,0,0,0.5)'),
     legend: { position: 'right', textStyle:{color:'#C8C8C8'} },
@@ -216,7 +250,7 @@ function drawChart() {
     },
     vAxis: {
       minValue:0,
-      
+
       title: 'Words per minute',
       gridlines: {
         color: '#3C3C3C'
@@ -228,9 +262,192 @@ function drawChart() {
         color: '#C8C8C8',
         fontName: 'Verdana',
         fontSize: 12,
-        italic: false 
+        italic: false
       }
-      
+
+    },
+    hAxis: {
+      minValue:1,
+      gridlines: {
+        color: '#3C3C3C'
+      },
+      textStyle: {
+        color:'#C8C8C8'
+      }
+    }
+  };
+  
+  chart1 = new google.visualization.LineChart(document.getElementById('curve_chart'));
+  chart1.draw(data, options);
+}
+
+
+
+function collectInfo() {
+  var ten_avg_speed = 0;
+  var ten_avg_speed_text = 0;
+  var ten_avg_speed_words = 0;
+  var all_text_speeds = 0;
+  var all_words_speeds = 0;
+  var count = 0; 
+  var word_count = 0;
+  var text_count = 0;
+  var ii = 0;
+  var overall_fastest = progress_data[0].wpm;
+  var words_fastest = 0;
+  var text_fastest = 0;
+  var all_accuracy = 0;
+  var all_text_accuracy = 0;
+  var all_words_accuracy = 0;
+  var average_ten_accuracy_counter = 0;
+  var average_ten_text_accuracy_counter = 0;
+  var average_ten_words_accuracy_counter = 0;
+  var all_text_speeds_array = [];
+  var all_words_speeds_array = [];
+  var all_overall_speeds_array = [];
+  var average_ten_accuracy_array = [];
+  var average_ten_accuracy_text_array = [];
+  var average_ten_accuracy_words_array = []; 
+  for (var i = 0; i <progress_data.length; i++) {
+    if (progress_data[i].type == 'text') {
+      all_text_speeds += progress_data[i].wpm;
+      all_text_accuracy += progress_data[i].accuracy;
+      text_count ++;
+      all_text_speeds_array.push(progress_data[i].wpm);
+      average_ten_accuracy_text_array.push(progress_data[i].accuracy);
+      if (progress_data[i].wpm > text_fastest) {
+        text_fastest = progress_data[i].wpm;
+      }
+    } else if (progress_data[i].type == 'words') {
+      all_words_speeds += progress_data[i].wpm;
+      all_words_accuracy += progress_data[i].accuracy;
+      all_words_speeds_array.push(progress_data[i].wpm);
+      average_ten_accuracy_words_array.push(progress_data[i].accuracy);
+      word_count ++;
+      if (progress_data[i].wpm > words_fastest) {
+        words_fastest = progress_data[i].wpm;
+      }
+    }
+  }
+  for (ii=0; ii <progress_data.length ; ii++) {
+    all_accuracy += progress_data[ii].accuracy;
+    count += progress_data[ii].wpm;
+    all_overall_speeds_array.push(progress_data[ii].wpm);
+    average_ten_accuracy_array.push(progress_data[ii].accuracy);
+    if (progress_data[ii].wpm > overall_fastest) {
+      overall_fastest = progress_data[ii].wpm;
+    }
+  }
+  /*Gather wpm of last 10*/
+  for (var i = 0; all_text_speeds_array.length > 10; i++) {
+    all_text_speeds_array.shift();
+  }
+  for (var i = 0; all_words_speeds_array.length > 10; i++) {
+    all_words_speeds_array.shift();
+  }
+  for (var i = 0; all_overall_speeds_array.length > 10; i++) {
+    all_overall_speeds_array.shift();
+  }
+  for (var i = 0; average_ten_accuracy_array.length > 10; i++) {
+    average_ten_accuracy_array.shift()
+  }
+  for (var i = 0; average_ten_accuracy_text_array.length > 10; i++) {
+    average_ten_accuracy_text_array.shift()
+  }
+  for (var i = 0; average_ten_accuracy_words_array.length > 10; i++) {
+    average_ten_accuracy_words_array.shift()
+  }
+  for (var i = 0; i < all_text_speeds_array.length; i++) {
+    average_ten_text_accuracy_counter += average_ten_accuracy_text_array[i];
+    ten_avg_speed_text += all_text_speeds_array[i]
+  }
+  for (var i = 0; i < all_words_speeds_array.length; i++) {
+    average_ten_words_accuracy_counter += average_ten_accuracy_words_array[i];
+    ten_avg_speed_words += all_words_speeds_array[i]
+  }
+  for (var i = 0; i < all_overall_speeds_array.length; i++) {
+    average_ten_accuracy_counter += average_ten_accuracy_array[i];
+    ten_avg_speed += all_overall_speeds_array[i];
+  }
+  /**/
+  text_test_count = text_count;
+  word_test_count = word_count;
+  highest_overall_wpm = overall_fastest;
+  highest_text_wpm = text_fastest;
+  highest_word_wpm = words_fastest;
+  average_ten_overall = Math.round(ten_avg_speed / all_overall_speeds_array.length);
+  average_ten_text = Math.round(ten_avg_speed_text / all_text_speeds_array.length);
+  average_ten_words = Math.round(ten_avg_speed_words / all_words_speeds_array.length);
+  overall_average_wpm = Math.round(count / ii);
+  text_average_wpm = Math.round(all_text_speeds / text_count);
+  words_average_wpm = Math.round(all_words_speeds / word_count);
+  average_overall_accuracy = Math.round(all_accuracy / ii);
+  average_text_accuracy = Math.round(all_text_accuracy / text_count);
+  average_words_accuracy = Math.round(all_words_accuracy / word_count);
+  console.log(average_ten_accuracy_array);
+  average_ten_accuracy = Math.round(average_ten_accuracy_counter / average_ten_accuracy_array.length);
+  average_ten_text_accuracy = Math.round(average_ten_text_accuracy_counter / average_ten_accuracy_text_array.length);
+  average_ten_words_accuracy = Math.round(average_ten_words_accuracy_counter / average_ten_accuracy_words_array.length);
+}
+function collectData() {
+  progress_collection = [];
+  if (progress_type == 'overall') {
+    progress_data.forEach((element, index) => {
+      progress_collection.push([index, element.wpm, element.accuracy]);
+    });
+  } else if (progress_type == 'words') {
+    iteration = 0;
+    for (var i = 0; i < progress_data.length; i ++) {
+      if (progress_data[i].type == 'words') {
+        iteration ++;
+        progress_collection.push([iteration, progress_data[i].wpm, progress_data[i].accuracy]);
+      }
+    }
+  } else if (progress_type == 'text') {
+    iteration = 0;
+    for (var i = 0; i < progress_data.length; i ++) {
+      if (progress_data[i].type == 'text') {
+        iteration ++;
+        progress_collection.push([iteration, progress_data[i].wpm, progress_data[i].accuracy]);
+        console.log(iteration)
+      }
+    }
+  }
+}
+function drawChart2() {
+  data = [];
+  collectData()
+  data = new google.visualization.DataTable();
+  data.addColumn('number','count');
+  data.addColumn('number','wpm');
+  data.addColumn('number','accuracy');
+  data.addRows(progress_collection);
+  var options = {
+
+    backgroundColor: ('rgba(0,0,0,0.5)'),
+    legend: { position: 'right', textStyle:{color:'#C8C8C8'} },
+    colors: ['white','#646464'],
+    backgroundColor : {
+      fill: '#1E1E1E',
+      stroke: '#3C3C3C'
+    },
+    pointSize:5,
+    vAxis: {
+      minValue:0,
+      title: 'wpm/accuracy',
+      gridlines: {
+        color: '#3C3C3C'
+      },
+      textStyle: {
+        color:'#C8C8C8'
+      },
+      titleTextStyle: {
+        color: '#C8C8C8',
+        fontName: 'Verdana',
+        fontSize: 12,
+        italic: false
+      }
+
     },
     hAxis: {
       minValue:1,
@@ -243,6 +460,188 @@ function drawChart() {
     }
   };
 
-  var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
-  chart.draw(data, options);
+  chart2 = new google.visualization.LineChart(document.getElementById('curve_chart2'));
+  chart2.draw(data, options);
+}
+function information_replacement() {
+  document.querySelector('.test-count').innerHTML= progress_data.length;
+  if (average_ten_overall < 20) {
+    overall_rank = 'No Experience'
+    document.querySelector('.suggested').innerHTML=`Suggested article:
+    <div class="suggested-card block">
+        <div class="suggested-top">No Experience<img class="suggested-img" src="Images/no-experience.png" style="width:70px; margin-left:12px"></div>
+        <hr class="suggested-hr"><div class="suggested-card-body">Not a touch typist</div>
+    </div>`
+  } else if (average_ten_overall < 50)  {
+    overall_rank = 'Beginner'
+    document.querySelector('.suggested').innerHTML=`Suggested article:
+    <div class="suggested-card block">
+        <div class="suggested-top">Beginner<img class="suggested-img" src="Images/beginner.png" style="width:70px; margin-left:12px"></div>
+        <hr class="suggested-hr"><div class="suggested-card-body">20 --> 50 wpm</div>
+    </div>`
+  } else if (average_ten_overall < 120)  {
+    overall_rank = 'Advanced'
+    document.querySelector('.suggested').innerHTML=`Suggested article:
+    <div class="suggested-card block">
+        <div class="suggested-top">Advanced<img class="suggested-img" src="Images/advanced (2).png" style="width:70px; margin-left:12px"></div>
+        <hr class="suggested-hr"><div class="suggested-card-body">50 --> 120 wpm</div>
+    </div>`
+  } else if (average_ten_overall >= 120)  {
+    overall_rank = 'Professional'
+    document.querySelector('.suggested').innerHTML=`Suggested article:
+    <div class="suggested-card block">
+        <div class="suggested-top">Professional<img class="suggested-img" src="Images/pro.png" style="width:70px; margin-left:12px"></div>
+        <hr class="suggested-hr"><div class="suggested-card-body">120wpm +</div>
+    </div>`
+  }
+  document.querySelector('.progress_rank').innerHTML= overall_rank;
+  document.querySelector('.progress_average').innerHTML= overall_average_wpm;
+  document.querySelector('.progress_best').innerHTML= highest_overall_wpm;
+  document.querySelector('.progress_average_ten').innerHTML= average_ten_overall;
+  document.querySelector('.progress_average_accuracy_ten').innerHTML = average_ten_accuracy;
+  document.querySelector('.progress_average_accuracy').innerHTML = average_overall_accuracy;
+}
+function text_information_replacement() {
+  document.querySelector('.test-count').innerHTML = text_test_count;
+  if (average_ten_text < 20) {
+    text_rank = 'No Experience'
+    document.querySelector('.suggested').innerHTML=`Suggested article:
+    <div class="suggested-card block">
+        <div class="suggested-top">No Experience<img class="suggested-img" src="Images/no-experience.png" style="width:70px; margin-left:12px"></div>
+        <hr class="suggested-hr"><div class="suggested-card-body">Not a touch typist</div>
+    </div>`
+  } else if (average_ten_text < 50)  {
+    text_rank = 'Beginner'
+    document.querySelector('.suggested').innerHTML=`Suggested article:
+    <div class="suggested-card block">
+        <div class="suggested-top">Beginner<img class="suggested-img" src="Images/beginner.png" style="width:70px; margin-left:12px"></div>
+        <hr class="suggested-hr"><div class="suggested-card-body">20 --> 50 wpm</div>
+    </div>`
+  } else if (average_ten_text < 120)  {
+    text_rank = 'Advanced'
+    document.querySelector('.suggested').innerHTML=`Suggested article:
+    <div class="suggested-card block">
+        <div class="suggested-top">Advanced<img class="suggested-img" src="Images/advanced (2).png" style="width:70px; margin-left:12px"></div>
+        <hr class="suggested-hr"><div class="suggested-card-body">50 --> 120 wpm</div>
+    </div>`
+  } else if (average_ten_text >= 120)  {
+    text_rank = 'Professional'
+    document.querySelector('.suggested').innerHTML=`Suggested article:
+    <div class="suggested-card block">
+        <div class="suggested-top">Professional<img class="suggested-img" src="Images/pro.png" style="width:70px; margin-left:12px"></div>
+        <hr class="suggested-hr"><div class="suggested-card-body">120wpm +</div>
+    </div>`
+  }
+  document.querySelector('.progress_rank').innerHTML=text_rank;
+  document.querySelector('.progress_average').innerHTML= text_average_wpm;
+  document.querySelector('.progress_best').innerHTML= highest_text_wpm;
+  document.querySelector('.progress_average_ten').innerHTML=average_ten_text;
+  document.querySelector('.progress_average_accuracy_ten').innerHTML = average_ten_text_accuracy;
+  document.querySelector('.progress_average_accuracy').innerHTML = average_text_accuracy;
+}
+function word_information_replacement() {
+  document.querySelector('.test-count').innerHTML = word_test_count;
+  if (average_ten_words < 20) {
+    words_rank = 'No Experience';
+    document.querySelector('.suggested').innerHTML=`Suggested article:
+    <div class="suggested-card block">
+        <div class="suggested-top">No Experience<img class="suggested-img" src="Images/no-experience.png" style="width:70px; margin-left:12px"></div>
+        <hr class="suggested-hr"><div class="suggested-card-body">Not a touch typist</div>
+    </div>`
+  } else if (average_ten_words < 50)  {
+    words_rank = 'Beginner';
+    document.querySelector('.suggested').innerHTML=`Suggested article:
+    <div class="suggested-card block">
+        <div class="suggested-top">Beginner<img class="suggested-img" src="Images/beginner.png" style="width:70px; margin-left:12px"></div>
+        <hr class="suggested-hr"><div class="suggested-card-body">20 --> 50 wpm</div>
+    </div>`
+  } else if (average_ten_words < 120)  {
+    words_rank = 'Advanced';
+    document.querySelector('.suggested').innerHTML=`Suggested article:
+    <div class="suggested-card block">
+        <div class="suggested-top">Advanced<img class="suggested-img" src="Images/advanced (2).png" style="width:70px; margin-left:12px"></div>
+        <hr class="suggested-hr"><div class="suggested-card-body">50 --> 120 wpm</div>
+    </div>`
+  } else if (average_ten_words >= 120)  {
+    words_rank = 'Professional';
+    document.querySelector('.suggested').innerHTML=`Suggested article:
+    <div class="suggested-card block">
+        <div class="suggested-top">Professional<img class="suggested-img" src="Images/pro.png" style="width:70px; margin-left:12px"></div>
+        <hr class="suggested-hr"><div class="suggested-card-body">120wpm +</div>
+    </div>`
+  };
+  document.querySelector('.progress_rank').innerHTML= words_rank;
+  document.querySelector('.progress_average').innerHTML= words_average_wpm;
+  document.querySelector('.progress_best').innerHTML= highest_word_wpm;
+  document.querySelector('.progress_average_ten').innerHTML=average_ten_words;
+  document.querySelector('.progress_average_accuracy_ten').innerHTML = average_ten_words_accuracy;
+  document.querySelector('.progress_average_accuracy').innerHTML = average_words_accuracy;
+}
+
+function progress_overall() {
+  information_replacement()
+  document.querySelector('.progress_text').classList.remove('selected');
+  document.querySelector('.progress_words').classList.remove('selected');
+  document.querySelector('.progress_overall').classList.add('selected');
+  chart2.clearChart();
+  progress_type = 'overall';
+  drawChart2()
+
+}
+function progress_texts() {
+  text_information_replacement();
+  document.querySelector('.progress_overall').classList.remove('selected');
+  document.querySelector('.progress_words').classList.remove('selected');
+  document.querySelector('.progress_text').classList.add('selected')
+  chart2.clearChart();
+  progress_type = 'text';
+  drawChart2()
+}
+function progress_words() {
+  word_information_replacement();
+  document.querySelector('.progress_text').classList.remove('selected');
+  document.querySelector('.progress_overall').classList.remove('selected');
+  document.querySelector('.progress_words').classList.add('selected');
+  chart2.clearChart();
+  progress_type = 'words';
+  drawChart2()
+
+}
+try {
+  input_element.addEventListener('input', () => {
+    typing()
+    if (started === false) {
+        started = true;
+        Interval = setInterval(function() {
+  
+            seconds ++;
+            wpm = Math.floor((true_characters / 5) / (seconds / 60))
+            raw = Math.floor((input_count / 5) / (seconds / 60))
+            accuracy = Math.floor(((user_characters.length - false_characters) / user_characters.length) * 100);
+            var moment_stats = [seconds,wpm,raw];
+            srw.push(moment_stats)
+            display_variables();
+            if (added == false) {
+              added = false;
+            }
+  
+        }, 1000);
+    }
+  })
+} catch{}
+
+function menu() {
+  document.querySelector('.top-menu').classList.toggle('opened-menu');
+  if (menu_case == 'closed') {
+    menu_case = 'opened';
+    document.querySelector('.nav-menu').innerHTML=`<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
+  <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z"/>
+</svg>`
+  } else {
+    menu_case = 'closed'
+    document.querySelector('.nav-menu').innerHTML=`<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+    <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+  </svg>`
+  }
+  
 }
