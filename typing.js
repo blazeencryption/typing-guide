@@ -62,6 +62,7 @@ const quotes = ["For the first time, he heard something that he knew to be music
                 "Nothing is more wonderful than the art of being free, but nothing is harder to learn how to use than freedom."];
 const words = "the of to and a in is it you that he was for on are with as I his they be at one have this from or had by hot but some what there we can out other were all your when up use word how said an each she which do their time if will way about many then them would write like so these her long make thing see him two has look more day could go come did my sound no most number who over know water than call first people may down side been now find any new work part take get place made live where after back little only round man year came show every good me give our under name very through just form much great think say help low line before turn cause same mean differ move right boy old too does tell sentence set three want air well also play small end put home read hand port large spell add even land here must big high such follow act why ask men change went light kind off need house picture try us again animal point mother world near build self earth father head stand own page should country found answer school grow study still learn plant cover food sun four thought let keep eye never last door between city tree cross since hard start might story saw far sea draw left late run don't while press close night real life few stop open seem together next white children begin got walk example ease paper often always music those both mark book letter until mile river car feet care second group carry took rain eat room friend began idea fish mountain north once base hear horse cut sure watch color face wood main enough plain girl usual young ready above ever red list though feel talk bird soon body dog family direct pose leave song measure state product black short numeral class wind question happen complete ship area half rock order fire south problem piece told knew pass farm top whole king size heard best hour better true during hundred am remember step early hold west ground interest reach fast five sing listen six table travel less morning ten simple several vowel toward war lay against pattern slow center love person money serve appear road map science rule govern pull cold notice voice fall power town fine certain fly unit lead cry dark machine note wait plan figure star box noun field rest correct able pound done beauty drive stood contain front teach week final gave green oh quick develop sleep warm free minute strong special mind behind clear tail produce fact street inch lot nothing course stay wheel full force blue object decide surface deep moon island foot yet busy test record boat common gold possible plane age dry wonder laugh thousand ago ran check game shape yes hot miss brought heat snow bed bring sit perhaps fill east weight language among";
 let all_words = words.split(" ");
+var current_theme;
 var iteration = 0;
 var chart1;
 var menu_case = 'closed'
@@ -107,8 +108,14 @@ var word_test_count = 0;;
 var overall_rank;
 var text_rank;
 var words_rank;
+
 const record = localStorage.getItem('record'); //should be an array of objects
+window.addEventListener('DOMContentLoaded',theme_load())
 window.onload = function() {
+  if (!localStorage.getItem("current_theme")) {
+    localStorage.setItem("current_theme","dark");
+  }
+  current_theme = localStorage.getItem('current_theme');
   progress_data = JSON.parse(localStorage.getItem('record')) || [];
   try {drawChart2()} catch {};
   try {collectInfo()} catch {};
@@ -212,7 +219,7 @@ function display_results() {
 function text() {
   type = 'text';
   repeat();
-  document.getElementById('text-button').classList.add('selected');
+  document.getElementById('text-button').classList.add('selected');onload
   document.getElementById('words-button').classList.remove('selected');
 }
 function word() {
@@ -494,6 +501,9 @@ function information_replacement() {
         <hr class="suggested-hr"><div class="suggested-card-body">120wpm +</div>
     </div>`
   }
+  if (localStorage.getItem('current_theme') == 'light') {
+    document.querySelector('.suggested-img').classList.add('light_theme_img');
+    } else { document.querySelector('.suggested-img').classList.remove('light_theme_img'); }
   document.querySelector('.progress_rank').innerHTML= overall_rank;
   document.querySelector('.progress_average').innerHTML= overall_average_wpm;
   document.querySelector('.progress_best').innerHTML= highest_overall_wpm;
@@ -510,6 +520,7 @@ function text_information_replacement() {
         <div class="suggested-top">No Experience<img class="suggested-img" src="Images/no-experience.png" style="width:70px; margin-left:12px"></div>
         <hr class="suggested-hr"><div class="suggested-card-body">Not a touch typist</div>
     </div>`
+    
   } else if (average_ten_text < 50)  {
     text_rank = 'Beginner'
     document.querySelector('.suggested').innerHTML=`Suggested article:
@@ -517,6 +528,7 @@ function text_information_replacement() {
         <div class="suggested-top">Beginner<img class="suggested-img" src="Images/beginner.png" style="width:70px; margin-left:12px"></div>
         <hr class="suggested-hr"><div class="suggested-card-body">20 --> 50 wpm</div>
     </div>`
+    
   } else if (average_ten_text < 120)  {
     text_rank = 'Advanced'
     document.querySelector('.suggested').innerHTML=`Suggested article:
@@ -524,6 +536,7 @@ function text_information_replacement() {
         <div class="suggested-top">Advanced<img class="suggested-img" src="Images/advanced (2).png" style="width:70px; margin-left:12px"></div>
         <hr class="suggested-hr"><div class="suggested-card-body">50 --> 120 wpm</div>
     </div>`
+    
   } else if (average_ten_text >= 120)  {
     text_rank = 'Professional'
     document.querySelector('.suggested').innerHTML=`Suggested article:
@@ -531,7 +544,11 @@ function text_information_replacement() {
         <div class="suggested-top">Professional<img class="suggested-img" src="Images/pro.png" style="width:70px; margin-left:12px"></div>
         <hr class="suggested-hr"><div class="suggested-card-body">120wpm +</div>
     </div>`
+    
   }
+  if (localStorage.getItem('current_theme') == 'light') {
+    document.querySelector('.suggested-img').classList.add('light_theme_img');
+    } else { document.querySelector('.suggested-img').classList.remove('light_theme_img'); }
   document.querySelector('.progress_rank').innerHTML=text_rank;
   document.querySelector('.progress_average').innerHTML= text_average_wpm;
   document.querySelector('.progress_best').innerHTML= highest_text_wpm;
@@ -570,12 +587,17 @@ function word_information_replacement() {
         <hr class="suggested-hr"><div class="suggested-card-body">120wpm +</div>
     </div>`
   };
+  if (localStorage.getItem('current_theme') == 'light') {
+    console.log('hello world');
+    document.querySelector('.suggested-img').classList.add('light_theme_img');
+    } else { document.querySelector('.suggested-img').classList.remove('light_theme_img'); }
   document.querySelector('.progress_rank').innerHTML= words_rank;
   document.querySelector('.progress_average').innerHTML= words_average_wpm;
   document.querySelector('.progress_best').innerHTML= highest_word_wpm;
   document.querySelector('.progress_average_ten').innerHTML=average_ten_words;
   document.querySelector('.progress_average_accuracy_ten').innerHTML = average_ten_words_accuracy;
   document.querySelector('.progress_average_accuracy').innerHTML = average_words_accuracy;
+
 }
 
 function progress_overall() {
@@ -644,4 +666,63 @@ function menu() {
   </svg>`
   }
   
+}
+function theme_load() {
+  if (localStorage.getItem('current_theme') == 'dark') {
+    dark_theme();
+  }
+  else if (localStorage.getItem('current_theme') == 'light') {
+    light_theme()
+  }
+}
+function theme() {
+  if (localStorage.getItem('current_theme') == 'dark') {
+    localStorage.setItem('current_theme','light');
+    light_theme()
+  }
+  else if (localStorage.getItem('current_theme') == 'light') {
+    localStorage.setItem('current_theme','dark');
+    dark_theme()
+  }
+}
+function dark_theme() {
+    document.documentElement.style.setProperty('--color1', 'rgb(30,30,30)');
+    document.documentElement.style.setProperty('--color2', 'rgb(50,50,50)');
+    document.documentElement.style.setProperty('--color3', 'rgb(120,120,120)');
+    document.documentElement.style.setProperty('--color4', 'rgb(100,100,100)');
+    document.documentElement.style.setProperty('--color6', 'rgb(240,240,240)');
+    document.documentElement.style.setProperty('--color7', 'rgb(20,20,20)');
+    document.documentElement.style.setProperty('--color8', 'rgb(0,0,0)');
+    document.documentElement.style.setProperty('--color9', 'rgb(150,150,150)');
+    document.documentElement.style.setProperty('--color10', 'rgb(255,255,255)');
+    document.documentElement.style.setProperty('--color11', 'rgb(80,80,80)');
+    document.documentElement.style.setProperty('--color12', 'rgb(40,40,40)');
+    document.documentElement.style.setProperty('--color13', 'rgb(25,25,25)');
+    document.documentElement.style.setProperty('--shadow', 'rgb(30,30,30)');
+    document.documentElement.style.setProperty('--inversion', 'invert(100%)');
+    document.querySelectorAll('.top-img').forEach(element => {
+      element.classList.remove('light_theme_img');
+    })
+
+
+}
+function light_theme() {
+    document.documentElement.style.setProperty('--color1', 'rgb(225,225,225)');
+    document.documentElement.style.setProperty('--color2', 'rgb(205,205,205)');
+    document.documentElement.style.setProperty('--color3', 'rgb(135,135,135)');
+    document.documentElement.style.setProperty('--color4', 'rgb(155,155,155)');
+    document.documentElement.style.setProperty('--color6', 'rgb(15,15,15)');
+    document.documentElement.style.setProperty('--color7', 'rgb(235,235,235)');
+    document.documentElement.style.setProperty('--color8', 'rgb(255,255,255)');
+    document.documentElement.style.setProperty('--color9', 'rgb(105,105,105)');
+    document.documentElement.style.setProperty('--color10', 'rgb(0,0,0)');
+    document.documentElement.style.setProperty('--color11', 'rgb(175,175,175)');
+    document.documentElement.style.setProperty('--color12', 'rgb(215,215,215)');
+    document.documentElement.style.setProperty('--color13', 'rgb(40,40,40)');
+    document.documentElement.style.setProperty('--shadow', 'rgb(70,70,70)');
+    document.documentElement.style.setProperty('--inversion', 'invert(0%)');
+    document.querySelectorAll('.top-img').forEach(element => {
+      element.classList.add('light_theme_img');
+    })
+
 }

@@ -43,3 +43,33 @@ Features:
 
 On main page: 
     -  
+
+
+
+
+
+
+
+
+
+
+
+
+
+progress page:
+For overall: array should have date, wpm, accuracy, type
+
+
+
+
+
+
+
+
+Plans:
+Switch all colors to variables and fix theme switch button
+make pages responsive
+make event listener to typing.html only
+
+
+

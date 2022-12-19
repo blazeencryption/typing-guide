@@ -1,3 +1,20 @@
+:root {
+    --color1: rgb(30,30,30);
+    --color2: rgb(50,50,50);
+    --color3: rgb(120,120,120);
+    --color4: rgb(100,100,100);
+    --color6: rgb(240,240,240);
+    --color7: rgb(20,20,20);
+    --color8: rgb(0,0,0);
+    --color9: rgb(150,150,150);
+    --color10: rgb(255,255,255);
+    --color11: rgb(80,80,80);
+    --color12: rgb(40,40,40);
+    --color13: rgb(25,25,25);
+    --shadow: rgb(30,30,30);
+    --inversion: invert(100%);
+    --inversion2: invert(100%);
+}
 html, body {
     margin: 0;
     width:100%;
@@ -6,7 +23,7 @@ html, body {
 }
 #index-main {
     overflow-x:hidden;
-    background-color: rgb(30,30,30);
+    background-color: var(--color1);
     width:100%;
     height:100%;
 }
@@ -20,7 +37,7 @@ html, body {
     display:none;
 }
 .top-menu {
-    background-color:rgb(20,20,20);
+    background-color: var(--color7);
     position:absolute;
     z-index: 300;
     width:100%;
@@ -34,7 +51,7 @@ html, body {
 }
 .menu-ul {
     padding-left:0;
-    color:white !important;
+    color: var(--color10) !important;
     list-style-type: none;
     padding-top:60px;
     display:flex;
@@ -46,14 +63,14 @@ html, body {
 .menu-hr {
     padding:none;
     margin:0;
-    background-color:white;
+    background-color: var(--color10);
     width:60%;
-    color:white;
+    color: var(--color10);
 }
 .menu-link {
-    color:white;
+    color: var(--color10);
     font-size:18px;
-    text-shadow: 2px 2px rgb(50,50,50);
+    text-shadow: 2px 2px var(--color2);
 }
 .wrapper {
     height: 100vh;
@@ -66,8 +83,8 @@ html, body {
     position: absolute;
     z-index:2;
     bottom: 55%;
-    text-shadow: 1px 1px rgb(120,120,120);
-    color:white;
+    text-shadow: 1px 1px var(--color3);
+    color: var(--color10);
     margin-left:20px;
     width: 30ch;
     animation: typing 3s steps(28) , blink .5s step-end infinite alternate;
@@ -79,7 +96,7 @@ html, body {
   }
   .learn-more {
     position:absolute;
-    color:white;
+    color: var(--color10);
     font-family:'Courier New', Courier, monospace;
     bottom:3%;
     z-index:100;
@@ -98,18 +115,18 @@ html, body {
     bottom:0;
     width:30px;
     border-radius:50%;
-    background-color:white;
+    background-color: var(--color10);
     display:flex;
     justify-content: center;
     align-items: center;
     margin-left:15px;
-    box-shadow: 1.5px 1.5px rgb(100,100,100);
+    box-shadow: 1.5px 1.5px var(--color4);
   }
   .discover {
     bottom:50%;
     position:absolute;
-    text-shadow: 1px 1px rgb(120,120,120);
-    color:white;
+    text-shadow: 1px 1px var(--color3);
+    color: var(--color10);
     margin-left:20px;
     width:0;
     animation-delay: 3s !important;
@@ -162,7 +179,7 @@ html, body {
     padding-right:150px;
 }
 .shape {
-    background-color: rgb(45,45,45);
+    background-color: var(--color2);
     height:100%;
     width:100%;
     right:0;
@@ -176,7 +193,7 @@ html, body {
     height:100%;
     right:85%;
     transform:rotate(5deg);
-    background-color: rgb(30,30,30);
+    background-color: var(--color1);
 }
 
 .thing {
@@ -186,17 +203,17 @@ html, body {
     scroll-snap-align: start;
 }
 #second-page {
-    background-color: rgb(30,30,30);
-    border-top: 5px solid white;
+    background-color: var(--color1);
+    border-top: 5px solid var(--color10);
     align-items: center;
 }
 .second-page-heading {
-    color:white;
+    color:var(--color10);
     font-family:'Courier New', Courier, monospace;
     text-align: center;
     padding-top:100px;
     font-size: 50px;
-    text-shadow: 2.5px 2.5px rgb(50,50,50);
+    text-shadow: 2.5px 2.5px var(--color2);
 }
 .feature-row {
     display:flex;
@@ -204,16 +221,16 @@ html, body {
     align-items: center;
 }
 .learn-more:hover {
-    color:white;
+    color:var(--color10);
     text-decoration: unset;
 }
 .card {
     margin: 0 auto;
-    background-color:rgb(240,240,240);
-    border: 3px solid rgb(20,20,20);
+    background-color: var(--color6);
+    border: 3px solid var(--color7);
     height: 210px;
     width: 300px;
-    box-shadow: 8px 8px rgb(30,30,30);
+    box-shadow: 8px 8px var(--shadow);
     transition: 0.5s;
     right:0;
     border-radius:20px;
@@ -245,39 +262,52 @@ html, body {
     margin: 0 auto;
     font-size: 22px;
     font-weight:600;
-    text-shadow: 1px 1px rgb(80,80,80);
+    color: var(--color8);
+    text-shadow: 1px 1px var(--color11);
     height: 100%;
     display: flex;
     align-items: center;
 }
 .card-body {
-    border-top: 3px solid rgb(40,40,40);
+    border-top: 3px solid var(--color12);
     border-bottom-left-radius: 16px;
     border-bottom-right-radius: 16px;
+    color: var(--color8);
     height: 0px;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 .card:hover {
-    box-shadow: 16px 16px rgb(30,30,30);
-    background-color:rgb(30,30,30);
-    color:white;
-    border-color: white;
+    box-shadow: 16px 16px var(--shadow);
+    background-color:var(--color1);
+    color:var(--color10);
+    border-color: var(--color10);
     right:10px;
     bottom:10px;
+    color:var(--color10);
     cursor:pointer;
     transition: 0.5s;
 }
-.card:hover .top img {
-    filter:invert(100%)
+.card:hover .top-img {
+    filter: var(--inversion);
+}
+.suggested-card:hover .suggested-img {
+    filter: var(--inversion);
+}
+.light_theme_img {
+    filter: var(--inversion2);
 }
 .card:hover .card-body {
-    border-top:3px solid white
+    border-top:3px solid var(--color10);
+    color:var(--color10);
+}
+.card:hover .top {
+    color: var(--color10);
 }
 .navbar-brand {
-    text-shadow: 1px 1px rgb(60,60,60);
-    font-weight:600;
+    text-shadow: 0.5px 0.5px var(--color2);
+    font-weight:700;
 }
 .nav-item {
     margin-right:35px;
@@ -286,13 +316,13 @@ html, body {
     color:#80f9ff;
 }
 .feature-hr {
-    color:white;
-    background-color:white;
+    color:var(--color10);
+    background-color:var(--color10);
 }
 .img-wrapper {
     height:15vw;
     width: 90%;
-    border: 2px solid white;
+    border: 2px solid var(--color10);
     margin: 0 auto;
     display:block;
     border-radius:30px;
@@ -328,8 +358,8 @@ html, body {
     min-height:550px;
     width:90%;
     padding-top:3%;
-    background-color: #333333;
-    box-shadow: 10px 10px #1a1a1a;
+    background-color: var(--color2);
+    box-shadow: 10px 10px var(--color13);
     border-radius:30px;
     right:0;
     position:relative;
@@ -338,7 +368,7 @@ html, body {
 }
 .feature-box:hover {
     transition:0.5s;
-    box-shadow: 25px 25px #1a1a1a;
+    box-shadow: 25px 25px var(--color13);
     bottom:15px;
     right:15px;
 }
@@ -346,7 +376,7 @@ html, body {
 
 .text-area {
     font-family:'Courier New', Courier, monospace;
-    color:white;
+    color:var(--color10);
     font-size:16px;
 
 }
@@ -363,7 +393,7 @@ html, body {
     font-family:'Courier New', Courier, monospace;
     letter-spacing: -0.4px;
     word-spacing: -0.2px;
-    background-color: rgb(30,30,30);
+    background-color: var(--color1);
     display:flex;
     justify-content: center;
     align-items: center;
@@ -374,9 +404,15 @@ html, body {
     font-size:25px;
     position: relative;
     width:1000px;
-    color:white;
+    color:var(--color10);
     border-radius:20px;
-    background-color:rgb(50,50,50);
+    background-color:var(--color2);
+}
+.bi-arrow-clockwise {
+    color:var(--color8);
+}
+.bi-caret-down-fill {
+    color:var(--color8);
 }
 #challenge-text {
     display:none;
@@ -411,23 +447,23 @@ html, body {
 }
 .reached {
     text-decoration:underline;
-    background-color:rgba(90,90,90,0.1)
+    background-color:rgba(90,90,90,0.1);
 }
 .option-row:first-child {
     margin-bottom:80px;
 }
 .true {
-    color:rgb(80,80,80);
+    color: var(--color11);
 }
 .stats {
     display:flex;
     justify-content: flex-end;
 }
 .wpm, .accuracy {
-    background-color: rgb(250,250,250);
-    box-shadow: 2px 2px rgb(150,150,150);
+    background-color: var(--color10);
+    box-shadow: 2px 2px var(--color9);
     border-radius:12px;
-    color:black;
+    color: var(--color8);
     font-family:Verdana, Geneva, Tahoma, sans-serif;
     font-size:16px;
     display:flex;
@@ -444,8 +480,8 @@ html, body {
     margin-right:25px;
 }
 #repeat {
-    background-color:rgb(250,250,250);
-    box-shadow: 2.5px 2.5px rgb(100,100,100);
+    background-color:var(--color10);
+    box-shadow: 2.5px 2.5px var(--color4);
     border-radius:100%;
     border:none;
     display:block;
@@ -458,7 +494,7 @@ html, body {
 }
 .option-button {
     justify-self: flex-end;
-    background-color: rgb(250,250,250);
+    background-color: var(--color10);
     border:none;
     width:90px;
     font-size:20px;
@@ -466,15 +502,16 @@ html, body {
     margin-left:4px;
     font-family:Verdana, Geneva, Tahoma, sans-serif;
     border-radius:10px;
-    box-shadow: 3px 3px rgb(150,150,150)
+    box-shadow: 3px 3px var(--color9);
+    color: var(--color8);
 }
 .option-button:hover {
     cursor:pointer;
 }
 .selected {
-    background-color: rgb(70,70,70) !important;
-    box-shadow: 3px 3px rgb(50,50,50) !important;
-    color:white !important;
+    background-color: var(--color11) !important;
+    box-shadow: 3px 3px var(--color2) !important;
+    color:var(--color10) !important;
     transition: 0.5s;
 }
 .field {
@@ -490,8 +527,8 @@ html, body {
     z-index: 0;
 }
 #result-repeat {
-    background-color:rgb(250,250,250);
-    box-shadow: 2px 2px rgb(100,100,100);
+    background-color:var(--color10);
+    box-shadow: 2px 2px var(--color4);
     border-radius:100%;
     border:none;
     margin: 30px auto 0 auto;
@@ -510,13 +547,13 @@ html, body {
     font-family:Calibri;
 }
 .result-sub {
-    color:rgb(200,200,200);
+    color: var(--color9);
     font-size:25px;
 }
 .result-num {
     font-size: 50px;
-    color:white;
-    text-shadow: 2.5px 2.5px rgb(70,70,70);
+    color:var(--color10);
+    text-shadow: 2.5px 2.5px var(--color11);
     margin-top:-38px;
 }
 .result-wpm {
@@ -524,8 +561,8 @@ html, body {
 }
 .output {
     font-weight:550;
-    color:rgb(230,230,230);
-    text-shadow: 1px 1px rgb( 80,80,80);
+    color:var(--color6);
+    text-shadow: 1px 1px var(--color11);
 }
 
 
@@ -543,16 +580,16 @@ html, body {
 }
 .progress-main {
     width:100%;
-    background-color:rgb(30,30,30);
+    background-color:var(--color1);
     height:100%;
 }
 .progress-container {
-    color:white;
+    color:var(--color10);
     font-family:'Courier New', Courier, monospace;
     width:100%;
     min-height:100vh;
     max-height:auto;
-    background-color:rgb(30,30,30);
+    background-color:var(--color1);
 }
 .graph-section {
     position: relative;
@@ -568,14 +605,15 @@ html, body {
     gap:10px;
 }
 .progress-type {
-    background-color: rgb(250,250,250);
+    background-color: var(--color10);
     border:none;
     width:90px;
+    color: var(--color8);
     font-size:18px;
     margin-bottom:16px;
     font-family:Verdana, Geneva, Tahoma, sans-serif;
     border-radius:10px;
-    box-shadow: 3px 3px rgb(150,150,150)
+    box-shadow: 3px 3px var(--color9);
 }
 .more-info {
     font-size:25px;
@@ -584,20 +622,20 @@ html, body {
 .suggested-card {
     margin: 0 !important;
     font-family: Calibri;
-    color:black;
-    box-shadow: 10px 10px rgb(20,20,20);
+    color:var(--color8);
+    box-shadow: 10px 10px var(--color7);
     width:250px;
     height:180px;
-    background-color:rgb(200,200,200);
+    background-color:var(--color6);
     border-radius:30px;
     transition:0.5s;
-    border: 2px solid black;
+    border: 2px solid var(--color8);
 }
 .suggested-card:hover {
-    box-shadow: 16px 16px rgb(30,30,30);
-    background-color:rgb(50,50,50);
-    color:white;
-    border-color: white;
+    box-shadow: 16px 16px var(--color1);
+    background-color:var(--color2);
+    color:var(--color10);
+    border-color: var(--color10);
     right:10px;
     bottom:10px;
     cursor:pointer;
@@ -606,13 +644,16 @@ html, body {
 .suggested-card:hover .suggested-top img {
     filter:invert(100%)
 }
+.suggested-card-body {
+    border-top:3px solid var(--color6);
+}
 .suggested-card:hover .suggested-card-body {
-    border-top:3px solid white
+    border-top:3px solid var(--color10);
 }
 .suggested-hr {
     margin:0;
     padding:0;
-    background-color:black;
+    background-color: var(--color8);
 }
 .suggested-top {
     margin: 0 auto;
@@ -655,7 +696,7 @@ html, body {
         width:800px;
     }
     .suggested-card {
-        box-shadow: 10px 10px rgb(20,20,20);
+        box-shadow: 10px 10px var(--color7);
         width:190px;
         height:130px;
     }
@@ -690,12 +731,12 @@ html, body {
 }
 @media (max-width:1200px) {
     .result-num {
-        text-shadow: 1.5px 1.5px rgb(80,80,80);
+        text-shadow: 1.5px 1.5px var(--color10);
         font-size:30px !important;
         margin-top:-25px;
     }
     .result-sub {
-        text-shadow: 1px 1px rgb(80,80,80);
+        text-shadow: 1px 1px var(--color10);
         font-size:16px;
     }
     #curve_chart {
@@ -793,7 +834,7 @@ html, body {
         margin: 0;
     }
     .accuracy-col, .rank-col, .speed-col {
-        border: 1px solid rgb(40,40,40);
+        border: 1px solid var(--color2);
     }
     .rank-col {
         padding-top:15px;
