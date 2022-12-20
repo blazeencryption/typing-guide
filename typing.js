@@ -121,7 +121,6 @@ window.onload = function() {
   try {collectInfo()} catch {};
   try {information_replacement()} catch{};
   try {repeat()} catch {};
-  try {information_replacement()} catch{};
 }
 function repeat() {
   clearInterval(Interval)
@@ -475,31 +474,31 @@ function information_replacement() {
   if (average_ten_overall < 20) {
     overall_rank = 'No Experience'
     document.querySelector('.suggested').innerHTML=`Suggested article:
-    <div class="suggested-card block">
+    <a href="no-experience.html"><div class="suggested-card block">
         <div class="suggested-top">No Experience<img class="suggested-img" src="Images/no-experience.png" style="width:70px; margin-left:12px"></div>
         <hr class="suggested-hr"><div class="suggested-card-body">Not a touch typist</div>
-    </div>`
+    </div></a>`
   } else if (average_ten_overall < 50)  {
     overall_rank = 'Beginner'
     document.querySelector('.suggested').innerHTML=`Suggested article:
-    <div class="suggested-card block">
+    <a href="beginner.html"><div class="suggested-card block">
         <div class="suggested-top">Beginner<img class="suggested-img" src="Images/beginner.png" style="width:70px; margin-left:12px"></div>
         <hr class="suggested-hr"><div class="suggested-card-body">20 --> 50 wpm</div>
-    </div>`
+    </div></a>`
   } else if (average_ten_overall < 120)  {
     overall_rank = 'Advanced'
     document.querySelector('.suggested').innerHTML=`Suggested article:
-    <div class="suggested-card block">
+    <a href="advanced.html"><div class="suggested-card block">
         <div class="suggested-top">Advanced<img class="suggested-img" src="Images/advanced (2).png" style="width:70px; margin-left:12px"></div>
         <hr class="suggested-hr"><div class="suggested-card-body">50 --> 120 wpm</div>
-    </div>`
+    </div></a>`
   } else if (average_ten_overall >= 120)  {
     overall_rank = 'Professional'
     document.querySelector('.suggested').innerHTML=`Suggested article:
-    <div class="suggested-card block">
+    <a href="professional.html"><div class="suggested-card block">
         <div class="suggested-top">Professional<img class="suggested-img" src="Images/pro.png" style="width:70px; margin-left:12px"></div>
         <hr class="suggested-hr"><div class="suggested-card-body">120wpm +</div>
-    </div>`
+    </div></a>`
   }
   if (localStorage.getItem('current_theme') == 'light') {
     document.querySelector('.suggested-img').classList.add('light_theme_img');
@@ -516,34 +515,34 @@ function text_information_replacement() {
   if (average_ten_text < 20) {
     text_rank = 'No Experience'
     document.querySelector('.suggested').innerHTML=`Suggested article:
-    <div class="suggested-card block">
+    <a href='no-experience.html'><div class="suggested-card block">
         <div class="suggested-top">No Experience<img class="suggested-img" src="Images/no-experience.png" style="width:70px; margin-left:12px"></div>
         <hr class="suggested-hr"><div class="suggested-card-body">Not a touch typist</div>
-    </div>`
+    </div></a>`
     
   } else if (average_ten_text < 50)  {
     text_rank = 'Beginner'
     document.querySelector('.suggested').innerHTML=`Suggested article:
-    <div class="suggested-card block">
+    <a href='beginner.html'><div class="suggested-card block">
         <div class="suggested-top">Beginner<img class="suggested-img" src="Images/beginner.png" style="width:70px; margin-left:12px"></div>
         <hr class="suggested-hr"><div class="suggested-card-body">20 --> 50 wpm</div>
-    </div>`
+    </div></a>`
     
   } else if (average_ten_text < 120)  {
     text_rank = 'Advanced'
     document.querySelector('.suggested').innerHTML=`Suggested article:
-    <div class="suggested-card block">
+    <a href='advanced.html'><div class="suggested-card block">
         <div class="suggested-top">Advanced<img class="suggested-img" src="Images/advanced (2).png" style="width:70px; margin-left:12px"></div>
         <hr class="suggested-hr"><div class="suggested-card-body">50 --> 120 wpm</div>
-    </div>`
+    </div></a>`
     
   } else if (average_ten_text >= 120)  {
     text_rank = 'Professional'
     document.querySelector('.suggested').innerHTML=`Suggested article:
-    <div class="suggested-card block">
+    <a href='professional.html'><div class="suggested-card block">
         <div class="suggested-top">Professional<img class="suggested-img" src="Images/pro.png" style="width:70px; margin-left:12px"></div>
         <hr class="suggested-hr"><div class="suggested-card-body">120wpm +</div>
-    </div>`
+    </div></a>`
     
   }
   if (localStorage.getItem('current_theme') == 'light') {
@@ -561,31 +560,35 @@ function word_information_replacement() {
   if (average_ten_words < 20) {
     words_rank = 'No Experience';
     document.querySelector('.suggested').innerHTML=`Suggested article:
+    <a href="no-experience.html">
     <div class="suggested-card block">
         <div class="suggested-top">No Experience<img class="suggested-img" src="Images/no-experience.png" style="width:70px; margin-left:12px"></div>
         <hr class="suggested-hr"><div class="suggested-card-body">Not a touch typist</div>
-    </div>`
+    </div></a>`
   } else if (average_ten_words < 50)  {
     words_rank = 'Beginner';
     document.querySelector('.suggested').innerHTML=`Suggested article:
+    <a href='beginner.html'>
     <div class="suggested-card block">
         <div class="suggested-top">Beginner<img class="suggested-img" src="Images/beginner.png" style="width:70px; margin-left:12px"></div>
         <hr class="suggested-hr"><div class="suggested-card-body">20 --> 50 wpm</div>
-    </div>`
+    </div></a>`
   } else if (average_ten_words < 120)  {
     words_rank = 'Advanced';
     document.querySelector('.suggested').innerHTML=`Suggested article:
+    <a href='advanced.html'>
     <div class="suggested-card block">
         <div class="suggested-top">Advanced<img class="suggested-img" src="Images/advanced (2).png" style="width:70px; margin-left:12px"></div>
         <hr class="suggested-hr"><div class="suggested-card-body">50 --> 120 wpm</div>
-    </div>`
+    </div></a>`
   } else if (average_ten_words >= 120)  {
     words_rank = 'Professional';
     document.querySelector('.suggested').innerHTML=`Suggested article:
+    <a href='professional.html'>
     <div class="suggested-card block">
         <div class="suggested-top">Professional<img class="suggested-img" src="Images/pro.png" style="width:70px; margin-left:12px"></div>
         <hr class="suggested-hr"><div class="suggested-card-body">120wpm +</div>
-    </div>`
+    </div></a>`
   };
   if (localStorage.getItem('current_theme') == 'light') {
     console.log('hello world');
@@ -700,6 +703,8 @@ function dark_theme() {
     document.documentElement.style.setProperty('--color13', 'rgb(25,25,25)');
     document.documentElement.style.setProperty('--shadow', 'rgb(30,30,30)');
     document.documentElement.style.setProperty('--inversion', 'invert(100%)');
+    document.documentElement.style.setProperty('--dropshadow', 'rgba(255,255,255,0.55)');
+    /*--dropshadow: rgba(0,0,0,0.25); */
     document.querySelectorAll('.top-img').forEach(element => {
       element.classList.remove('light_theme_img');
     })
@@ -721,6 +726,7 @@ function light_theme() {
     document.documentElement.style.setProperty('--color13', 'rgb(40,40,40)');
     document.documentElement.style.setProperty('--shadow', 'rgb(70,70,70)');
     document.documentElement.style.setProperty('--inversion', 'invert(0%)');
+    document.documentElement.style.setProperty('--dropshadow', 'rgba(0,0,0,0.5)')
     document.querySelectorAll('.top-img').forEach(element => {
       element.classList.add('light_theme_img');
     })

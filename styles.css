@@ -14,9 +14,11 @@
     --shadow: rgb(30,30,30);
     --inversion: invert(100%);
     --inversion2: invert(100%);
+    --dropshadow: rgba(0,0,0,0.25);
 }
 html, body {
     margin: 0;
+    padding: 0;
     width:100%;
     height:100%;
     scroll-behavior: smooth;
@@ -200,7 +202,6 @@ html, body {
     position:relative;
     height:100vh;
     max-height:auto;
-    scroll-snap-align: start;
 }
 #second-page {
     background-color: var(--color1);
@@ -674,6 +675,68 @@ html, body {
 .block {
     margin: 0 0 0 20%;
 }
+
+/* Article pages*/
+#articles-main {
+    padding:0;
+    margin:0;
+    overflow-x: hidden;
+    height:100%;
+    background-color: var(--color1);
+    width:100%;
+}
+.articles-first-half {
+    height:100%;
+    align-items: center;
+    flex-direction: column;
+    display:flex;
+    justify-content: center;
+    gap:20px;
+}
+.articles-second-half {
+    height:100%;
+    width:100%;
+    display:flex;
+    background-color: var(--color2);
+}
+
+.article-img-wrap {
+    position: relative;
+    z-index:100;
+}
+.article-img {
+    filter: drop-shadow(0 4px 4px var(--dropshadow)) var(--inversion);
+    width:150px;
+}
+.article-title {
+    position: relative;
+    z-index: 2;
+    font-family:'Courier New', Courier, monospace;
+    font-weight:600;
+    color: var(--color6);
+    font-size:40px;
+    
+}
+.article-rate {
+    position:relative;
+    z-index:2;
+    display: flex;
+    gap:20px;
+}
+.bi-star-fill, .bi-star {
+    width:80px;
+    color: var(--color6);
+    height:80px;
+    filter: drop-shadow(5px 5px 5px rgb(0,0,0));
+}
+a {
+    text-decoration: none !important;
+}
+
+
+
+
+
 @media (max-width: 1800px) {
     .card {
         width:250px;
