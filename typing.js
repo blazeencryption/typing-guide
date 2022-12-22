@@ -248,24 +248,24 @@ function drawChart() {
     pointSize: 3,
     curveType: 'function',
     backgroundColor: ('rgba(0,0,0,0.5)'),
-    legend: { position: 'right', textStyle:{color:'#C8C8C8'} },
-    colors: ['white','#646464'],
+    legend: { position: 'right', textStyle:{color: (current_theme == 'dark') ? '#C8C8C8': '#8C8C8C'} },
+    colors:(current_theme == 'dark') ? ['white','#646464'] : ['black','#5050B4'],
     backgroundColor : {
-      fill: '#1E1E1E',
-      stroke: '#3C3C3C'
+      fill: (current_theme == 'dark') ? '#1E1E1E' : '#E1E1E1',
+      stroke: (current_theme == 'dark') ? '#3c3c3c' : '#c3c3c3'
     },
     vAxis: {
       minValue:0,
 
       title: 'Words per minute',
       gridlines: {
-        color: '#3C3C3C'
+        color: (current_theme == 'dark') ? '#3c3c3c' : '#c3c3c3'
       },
       textStyle: {
-        color:'#C8C8C8'
+        color: (current_theme == 'dark') ? '#C8C8C8': '#8C8C8C'
       },
       titleTextStyle: {
-        color: '#C8C8C8',
+        color: (current_theme == 'dark') ? '#C8C8C8': '#8C8C8C',
         fontName: 'Verdana',
         fontSize: 12,
         italic: false
@@ -275,10 +275,10 @@ function drawChart() {
     hAxis: {
       minValue:1,
       gridlines: {
-        color: '#3C3C3C'
+        color: (current_theme == 'dark') ? '#3c3c3c' : '#c3c3c3'
       },
       textStyle: {
-        color:'#C8C8C8'
+        color: (current_theme == 'dark') ? '#C8C8C8': '#8C8C8C'
       }
     }
   };
@@ -431,24 +431,25 @@ function drawChart2() {
   var options = {
 
     backgroundColor: ('rgba(0,0,0,0.5)'),
-    legend: { position: 'right', textStyle:{color:'#C8C8C8'} },
-    colors: ['white','#646464'],
+    legend: { position: 'right', textStyle:{color: (current_theme == 'dark') ? '#C8C8C8': '#8C8C8C'} },
+    colors: (current_theme == 'dark') ? ['white','#646464'] : ['black','#5050B4'],
     backgroundColor : {
-      fill: '#1E1E1E',
-      stroke: '#3C3C3C'
+      
+      fill: (current_theme == 'dark') ? '#1E1E1E' : '#E1E1E1',
+      stroke: (current_theme == 'dark') ? '#1E1E1E' : '#E1E1E1',
     },
     pointSize:5,
     vAxis: {
       minValue:0,
       title: 'wpm/accuracy',
       gridlines: {
-        color: '#3C3C3C'
+        color: (current_theme == 'dark') ? '#3C3C3C' : '#C3C3C3'
       },
       textStyle: {
-        color:'#C8C8C8'
+        color: (current_theme == 'dark') ? '#C8C8C8': '#8C8C8C'
       },
       titleTextStyle: {
-        color: '#C8C8C8',
+        color:  (current_theme == 'dark') ? '#C8C8C8': '#8C8C8C',
         fontName: 'Verdana',
         fontSize: 12,
         italic: false
@@ -458,10 +459,10 @@ function drawChart2() {
     hAxis: {
       minValue:1,
       gridlines: {
-        color: '#3C3C3C'
+        color: (current_theme == 'dark') ? '#3C3C3C' : '#C3C3C3'
       },
       textStyle: {
-        color:'#C8C8C8'
+        color: (current_theme == 'dark') ? '#C8C8C8': '#8C8C8C'
       }
     }
   };
@@ -687,6 +688,7 @@ function theme() {
     localStorage.setItem('current_theme','dark');
     dark_theme()
   }
+  drawChart()
 }
 function dark_theme() {
     document.documentElement.style.setProperty('--color1', 'rgb(30,30,30)');

@@ -99,6 +99,7 @@ html, body {
   .learn-more {
     position:absolute;
     color: var(--color10);
+    fill: var(--color1);
     font-family:'Courier New', Courier, monospace;
     bottom:3%;
     z-index:100;
@@ -702,7 +703,7 @@ html, body {
 
 .article-img-wrap {
     position: relative;
-    z-index:100;
+    z-index:2;
 }
 .article-img {
     filter: drop-shadow(0 4px 4px var(--dropshadow)) var(--inversion);
@@ -732,7 +733,25 @@ html, body {
 a {
     text-decoration: none !important;
 }
-
+.article-text-wrap {
+    width:100%;
+    display:flex;
+    justify-content: center;
+    position:relative;
+    z-index:2;
+    padding-left:15%;
+    align-items: center;
+    height:auto;
+}
+.article-text {
+    font-family: 'Courier New', Courier, monospace;
+    text-align: justify;
+    width: 70%;
+    color: var(--color10);
+    font-size:20px;
+    position: relative;
+    z-index: 2;
+}
 
 
 
@@ -755,6 +774,19 @@ a {
     }
 }
 @media (max-width: 1400px) {
+    .article-text {font-size: 18px;}
+    .article-img {
+        width:75px;
+    }
+    .article-title {
+        font-size:20px;
+    }
+    .article-rate {
+        gap:20px;
+    }
+    .bi-star-fill, .bi-star {
+        width:40px;
+    }
     #curve_chart {
         width:800px;
     }
@@ -825,6 +857,19 @@ a {
     }
 }
 @media (max-width:990px) {
+    .articles-second-half {
+        height:auto;
+    }
+    .article-text-wrap {
+        padding-top:12%;
+        padding-left:0%;
+    }
+    .articles-first-half {
+        height: 40%;
+        gap:0px;
+        padding-top:50px;
+    }
+    
     .rank-wrap {
         padding-left:38%;
     }
@@ -945,6 +990,9 @@ a {
     }
 }
 @media (max-width:700px) {
+    .article-text {
+        font-size: 16px;
+    }
     #curve_chart {
         width:400px;
     }
@@ -964,6 +1012,9 @@ a {
     .card-container {
         padding:none;   
     }*/
+    .article-text {
+        font-size:14px;
+    }
     .rank-wrap {
         padding-left:30%;
     }
@@ -993,6 +1044,12 @@ a {
     }
 }
 @media (max-width:500px) {
+    .article-text {
+        width: 90%;
+    }
+    .article-text {
+        font-size:13px;
+    }
     #curve_chart {
         width:300px;
     }
@@ -1020,6 +1077,9 @@ a {
 
 }
 @media (max-width:400px) {
+    .article-text {
+        font-size:12px;
+    }
     .curve_chart {
         width:50% !important;
         display:block;
